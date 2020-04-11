@@ -50,13 +50,15 @@ function generatePassword() {
     upper: UC(),
     specialChar: SP()
   }
-  var func = Object.values(ObjectFunc);
-  console.log(func);
-
-   for (let i = 0; i < Userlenght; i += count){
-    return func [Math.floor(Math.random() * func.length)];
+  const Arr = [ObjectFunc.number,ObjectFunc.lower,ObjectFunc.upper,ObjectFunc.specialChar].filter(item =>Object.values(item)[0]);
+  
+   for (var i = 0; i < Userlenght; i+=count){
+    Arr.forEach((Arr) => {
+      generateCount += Arr;
+    }); 
+    return generateCount;
    }
-
+   
 
 
   function NM() {
